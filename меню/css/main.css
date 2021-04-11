@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+#bar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #57626F;
+    border-right: 4px solid #e0e5ea;
+    left: -250px;
+    -moz-transition: all 600ms;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+}
+#bar.active {
+    left: 0px;
+}
+
+#bar ul li:first-child{
+    text-align: center;
+    color: white;
+    font-size: 1.95em;
+    list-style: none;
+    padding: 25px 10px 10px 10px;
+}
+#bar ul li:not(:first-child){
+    width: 90%;
+    margin-left: 10%;
+    font-size: 1.1em;
+    list-style: none;
+    padding: 15px 10px;
+}
+#bar ul li a {
+    color: #dfe5eb;
+    text-decoration: none;
+    position: relative;
+    line-height: 1;
+}
+
+a:before {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #59e9df;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    left: 50%;
+    bottom: 0;
+    
+}
+a:after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #59e9df;
+    transition: width 0.3s ease-in-out;
+    left: 50%;
+    bottom: 0;
+}
+a:hover:before {
+    width: 50%;
+    left: 0;
+}
+a:hover:after {
+    width: 50%;
+}
+.toggle-btn{
+    position: absolute;
+    left: 270px;
+    top: 20px;
+    background-color: #e0e5ea;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.toggle-btn:hover{background: #556270;}
+.toggle-btn:hover span{background: #fafafa;}
+
+.toggle-btn span{ 
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #666;
+    margin: 4px 0;
+}
